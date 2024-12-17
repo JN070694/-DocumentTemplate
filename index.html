@@ -13,7 +13,7 @@
             line-height: 1.5;
         }
 
-        .headers, .attachments {
+        .headers, .attachments, .independent-dependent {
             margin-bottom: 20px;
         }
 
@@ -32,6 +32,28 @@
             border: 0;
             border-top: 1px solid #000;
             margin: 10px 0;
+        }
+
+        .independent {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .dependent {
+            margin-left: 50px; /* Indentation for dependent answers */
+        }
+        .dependent ul {
+            list-style-type: none; /* Remove default bullets */
+            padding-left: 0;
+        }
+        .dependent li {
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .dependent li::before {
+            content: "♦"; /* Custom bullet symbol */
+            position: absolute;
+            left: -30px; /* Move the bullet to the left to match the 50px indent */
+            color: black;
         }
 
         .attachments ul {
@@ -66,6 +88,30 @@
     </div>
 
     <p>Your document content will go here. You can add text, images, or other HTML elements below this section. This paragraph is slightly smaller than the headers.</p>
+
+    <!-- First Independent and Dependent Fields Example -->
+    <div class="independent-dependent">
+        <p class="independent">Independent Field Example 1:</p>
+        <div class="dependent">
+            <ul>
+                <li>Dependent Response 1A</li>
+                <li>Dependent Response 1B</li>
+                <li>Dependent Response 1C</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Second Independent and Dependent Fields Example -->
+    <div class="independent-dependent">
+        <p class="independent">Independent Field Example 2:</p>
+        <div class="dependent">
+            <ul>
+                <li>Dependent Response 2A</li>
+                <li>Dependent Response 2B</li>
+                <li>Dependent Response 2C</li>
+            </ul>
+        </div>
+    </div>
 
     <div class="attachments">
         <h4>Attachments:</h4>
